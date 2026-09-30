@@ -1,0 +1,3 @@
+@import "tailwindcss";
+:root{--cream:#fff9ef;--ink:#24170f;--orange:#ef6c2f;--yellow:#ffbf45;--green:#294d38}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}.grain{background-image:radial-gradient(rgba(36,23,15,.07) .6px,transparent .6px);background-size:8px 8px}.shadow-soft{box-shadow:0 16px 40px rgba(36,23,15,.10)}
