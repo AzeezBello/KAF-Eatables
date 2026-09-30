@@ -1,3 +1,62 @@
 @import "tailwindcss";
-:root{--cream:#fff9ef;--ink:#24170f;--orange:#ef6c2f;--yellow:#ffbf45;--green:#294d38}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}.grain{background-image:radial-gradient(rgba(36,23,15,.07) .6px,transparent .6px);background-size:8px 8px}.shadow-soft{box-shadow:0 16px 40px rgba(36,23,15,.10)}
+
+/* Brand tokens, taken from the KAF Eatables logo: black, gold, white. */
+@theme {
+  --color-ink: #0a0a0a;
+  --color-ink-soft: #171512;
+  --color-gold: #e0a820;
+  --color-gold-bright: #f5bd35;
+  --color-gold-deep: #a9780c;
+  --color-gold-soft: #fdf3d6;
+  --color-paper: #faf6ee;
+  --color-wa: #25d366;
+
+  --font-sans: ui-rounded, "SF Pro Rounded", "Segoe UI Variable", "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --shadow-soft: 0 24px 60px -28px rgb(0 0 0 / 0.45);
+  --shadow-glow: 0 12px 40px -12px rgb(224 168 32 / 0.55);
+
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-slide-in: slide-in 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-fade-in: fade-in 0.3s ease both;
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes slide-in {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  :focus-visible { outline: 3px solid var(--color-gold); outline-offset: 3px; }
+  img, video { display: block; max-width: 100%; }
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+@utility pb-safe {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+/* Subtle gold grain used on dark sections. */
+@utility bg-grain {
+  background-image: radial-gradient(rgb(224 168 32 / 0.08) 0.7px, transparent 0.7px);
+  background-size: 10px 10px;
+}
