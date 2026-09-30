@@ -18,6 +18,7 @@ export const site = {
     { label: "0812 526 1879", e164: "+2348125261879", href: "tel:+2348125261879" },
   ],
   instagram: "https://www.instagram.com/p/Cq7YzkZqvhF/?img_index=1",
+  ceo: { name: "Miss Kofoworola Laguda", title: "CEO/MD" },
 } as const;
 
 export const nav = [

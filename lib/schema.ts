@@ -30,6 +30,7 @@ export function businessSchema() {
           { "@type": "Country", name: site.country },
         ],
         hasMenu: absoluteUrl("/menu"),
+        founder: { "@type": "Person", name: site.ceo.name, jobTitle: site.ceo.title, image: absoluteUrl("/images/KAF-CEO.jpg") },
         sameAs: [site.instagram],
         contactPoint: site.phones.map((p) => ({
           "@type": "ContactPoint",

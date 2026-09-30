@@ -44,7 +44,7 @@ export default function AboutPage() {
           <div className="relative mx-auto aspect-[6/7] w-full max-w-md overflow-hidden rounded-[2rem] shadow-soft ring-1 ring-ink/5 md:mx-0">
             <Image
               src={ceo}
-              alt="The CEO of KAF Eatables turning grilled chicken with tongs at a live event"
+              alt="Miss Kofoworola Laguda, CEO and MD of KAF Eatables, turning grilled chicken with tongs at a live event"
               fill
               priority
               placeholder="blur"
@@ -52,16 +52,16 @@ export default function AboutPage() {
               className="object-cover"
             />
             <span className="absolute bottom-4 left-4 rounded-full bg-ink/80 px-3 py-1.5 text-[11px] font-black uppercase tracking-wider text-gold backdrop-blur">
-              CEO, KAF Eatables
+              {site.ceo.name} · {site.ceo.title}
             </span>
           </div>
           <div>
             <Eyebrow>Meet the CEO</Eyebrow>
             <h2 id="ceo-heading" className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">
-              Still on the grill at every event.
+              {site.ceo.name}, <span className="text-gold-deep">still on the grill at every event.</span>
             </h2>
             <p className="mt-4 text-ink/70 leading-7">
-              KAF Eatables is run hands-on. The CEO is not behind a desk when an order goes out. You will find the boss at the grill, turning the chicken, checking the pepper and making sure every tray leaves the way it should.
+              KAF Eatables is run hands-on by its {site.ceo.title}, {site.ceo.name}. She is not behind a desk when an order goes out. You will find her at the grill, turning the chicken, checking the pepper and making sure every tray leaves the way it should.
             </p>
             <p className="mt-3 text-ink/70 leading-7">
               That is the standard the whole team works to: cook it fresh, taste it, pack it properly, and treat every customer like family.
