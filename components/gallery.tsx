@@ -2,7 +2,7 @@ import Image, { type StaticImageData } from "next/image";
 import { ArrowRight } from "lucide-react";
 import teamFrying from "@/public/images/team-frying.jpg";
 import puffPuffTeam from "@/public/images/team-frying-puff-puff.jpg";
-import eventCooking from "@/public/images/event-cooking.jpg";
+import skewersTray from "@/public/images/puff-puff-chicken-skewers-tray.jpg";
 import skewers from "@/public/images/chicken-skewers-pile.jpg";
 import pouches from "@/public/images/kaf-branded-pouches.jpg";
 import puffPuff from "@/public/images/puff-puff-closeup.jpg";
@@ -12,7 +12,7 @@ const shots: { src: StaticImageData; alt: string; className?: string }[] = [
   { src: puffPuffTeam, alt: "KAF Eatables cook frying a fresh batch of puff puff in a large pan", className: "row-span-2" },
   { src: skewers, alt: "A pile of freshly grilled KAF Eatables chicken skewers" },
   { src: pouches, alt: "Two KAF Eatables branded packaging pouches being sealed" },
-  { src: eventCooking, alt: "KAF Eatables cooking live at an outdoor event kitchen" },
+  { src: skewersTray, alt: "KAF Eatables tray of puff puff, spring rolls and peppered chicken skewers" },
   { src: puffPuff, alt: "Close-up of golden KAF Eatables puff puff" },
   { src: teamFrying, alt: "Two members of the KAF Eatables team frying small chops outdoors", className: "col-span-2" },
 ];
